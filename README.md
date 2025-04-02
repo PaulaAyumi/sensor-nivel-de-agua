@@ -226,13 +226,37 @@ Figura 16. Protótipo com o LED amarelo aceso indicando o nível de água médio
 Figura 17. Protótipo com o LED verde aceso indicando o nível de água alto e o buzzer tocando
 
  
-Figura 18. Interface do aplicativo “MQTT Dashboard Cliente” indicando os níveis de água
+Figura 18. Interface do aplicativo “MQTT Dashboard Cliente” indicando os níveis 
+de água
+
+
+
+Núm. Medida	Sensor/Atuador	Tempo de Resposta (ms)
+1	Sensor - MQTT	120 ms
+2	Sensor - MQTT	135 ms
+3	Sensor - MQTT	140 ms
+4	Sensor - MQTT	125 ms
+Média		130 ms
+1	Atuador (LED/Buzzer)	80 ms
+2	Atuador (LED/Buzzer)	95 ms
+3	Atuador (LED/Buzzer)	85 ms
+4	Atuador (LED/Buzzer)	90 ms
+Média		87.5 ms
+
 Link para o vídeo-demonstração no YouTube da apresentação do funcionamento do projeto
 
 https://www.youtube.com/shorts/r8yixLV95uk
 
+Link para o GitHub
+https://github.com/PaulaAyumi/sensor-nivel-de-agua/
+
 4. Conclusão
-	Os testes realizados confirmaram que o sistema monitora e transmite corretamente as leituras do sensor de nível de água. A comunicação via Wi-Fi e MQTT foi estabelecida com sucesso, permitindo o envio dos dados para um servidor remoto. Esse projeto pode ser utilizado para aplicações práticas, como monitoramento de caixas d’água, sistemas de irrigação automatizados e controle remoto de níveis de líquidos.
+	O projeto de monitoramento do nível de água utilizando um sensor analógico, ESP8266 e comunicação via MQTT atingiu seus objetivos propostos. Foi possível desenvolver um sistema funcional que permite o acompanhamento remoto do nível da água, acionando LEDs e um buzzer para indicar diferentes faixas de medição. Além disso, a comunicação com um broker MQTT possibilitou a transmissão das informações para um servidor, garantindo que os dados pudessem ser acessados remotamente.
+Durante o desenvolvimento, alguns desafios foram enfrentados. A conexão com o servidor MQTT apresentou dificuldades iniciais, resolvidas com a configuração correta do ID do cliente e ajustes na autenticação. Além disso, o acionamento dos LEDs e do buzzer não ocorria conforme esperado, o que exigiu revisões na lógica do código e na calibração dos valores lidos pelo sensor. Outro problema encontrado foi a instabilidade na leitura dos níveis de água, solucionada com ajustes no tempo de espera entre medições.
+O projeto apresenta várias vantagens, como a possibilidade de monitoramento remoto, o uso de componentes acessíveis e um sistema modular que pode ser expandido para novas aplicações. No entanto, algumas desvantagens também foram identificadas, como a dependência de uma conexão Wi-Fi estável, a imprecisão do sensor analógico e a necessidade de uma fonte de alimentação contínua.
+Para melhorar o projeto, algumas otimizações podem ser implementadas no futuro. O uso de sensores digitais permitiria medições mais precisas, enquanto a integração com um banco de dados possibilitaria o armazenamento e a análise de leituras anteriores. Além disso, a criação de um aplicativo móvel para exibir os dados de forma intuitiva tornaria o sistema mais acessível aos usuários. Outra possível melhoria seria a implementação de uma bateria de backup, garantindo o funcionamento contínuo do dispositivo em caso de queda de energia.
+Dessa forma, o projeto demonstrou sua viabilidade e funcionalidade, apresentando resultados satisfatórios, mas também abrindo espaço para aprimoramentos futuros que podem torná-lo ainda mais eficiente e confiável.
+
 5. Referências
 AUTOCORE ROBÓTICA. Cabos Dupont jumper fêmea para macho 10cm - Pacote com 40 peças. Disponível em: <https://www.autocorerobotica.com.br/cabos-dupont-jumper-fxm-10cm-pacote-com-40pcs>. Acesso em: 10 mar. 2025.
 AUTOCORE ROBÓTICA. Protoboard 400 pontos cristal. Disponível em: <https://www.autocorerobotica.com.br/protoboard-400-pontos-cristal>. Acesso em: 10 mar. 2025.
